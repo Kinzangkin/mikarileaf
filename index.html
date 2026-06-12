@@ -164,14 +164,14 @@ transform:translateY(-100px);
 </div><div class="card">
 <h2>Request Type</h2>
 <div class="option-container">
-  <label><input type="radio" name="type" checked> Puppeting Animation</label>
+  <label><input type="radio" name="type" value="Puppeting Animation" checked> Puppeting Animation</label>
   <details class="info-dropdown">
     <summary>What is this? 🤔</summary>
     <p>Animating a 2D character (Live2D style) using layered parts. Ideal for VTuber models, character standees, and profile animations. Includes smooth breathing, head movements, blink/mouth sync, and physics hair sway.</p>
   </details>
 </div>
 <div class="option-container">
-  <label><input type="radio" name="type"> Attractive Live Animation</label>
+  <label><input type="radio" name="type" value="Attractive Live Animation"> Attractive Live Animation</label>
   <details class="info-dropdown">
     <summary>What is this? 🤔</summary>
     <p>Rich, dynamic animation featuring high-quality visual effects (VFX), particle overlays, camera motions, and moving background elements. Great for wallpaper showcases, game trailers, and promotional scenes.</p>
@@ -185,78 +185,81 @@ transform:translateY(-100px);
 
 </div><div class="card">
 <h2>Animation Complexity</h2>
-<label><input type="radio" name="complexity"> <span class="price-text" data-idr="Low (150K–200K)" data-usd="Low ($10–$13)">Low (150K–200K)</span></label>
-<label><input type="radio" name="complexity"> <span class="price-text" data-idr="Mid (200K–350K)" data-usd="Mid ($13–$23)">Mid (200K–350K)</span></label>
-<label><input type="radio" name="complexity"> <span class="price-text" data-idr="Hard (350K–650K)" data-usd="Hard ($23–$43)">Hard (350K–650K)</span></label>
+<label><input type="radio" name="complexity" value="Low"> <span class="price-text" data-idr="Low (150K–200K)" data-usd="Low ($10–$13)">Low (150K–200K)</span></label>
+<label><input type="radio" name="complexity" value="Mid"> <span class="price-text" data-idr="Mid (200K–350K)" data-usd="Mid ($13–$23)">Mid (200K–350K)</span></label>
+<label><input type="radio" name="complexity" value="Hard"> <span class="price-text" data-idr="Hard (350K–650K)" data-usd="Hard ($23–$43)">Hard (350K–650K)</span></label>
 
 </div><div class="card">
 <h2>Quality Option</h2>
-<label><input type="radio" name="quality"> <span class="price-text" data-idr="1K (Free)" data-usd="1K (Free)">1K (Free)</span></label>
-<label><input type="radio" name="quality"> <span class="price-text" data-idr="2K (+20K)" data-usd="2K (+$1.5)">2K (+20K)</span></label>
-<label><input type="radio" name="quality"> <span class="price-text" data-idr="4K (+50K)" data-usd="4K (+$3.5)">4K (+50K)</span></label>
+<label><input type="radio" name="quality" value="1K"> <span class="price-text" data-idr="1K (Free)" data-usd="1K (Free)">1K (Free)</span></label>
+<label><input type="radio" name="quality" value="2K"> <span class="price-text" data-idr="2K (+20K)" data-usd="2K (+$1.5)">2K (+20K)</span></label>
+<label><input type="radio" name="quality" value="4K"> <span class="price-text" data-idr="4K (+50K)" data-usd="4K (+$3.5)">4K (+50K)</span></label>
 
 </div><div class="card">
 <h2>Resolution</h2>
-<label><input type="radio" name="resolution"> 1080x1920 Portrait</label>
-<label><input type="radio" name="resolution"> 1920x1080 Landscape</label>
-<label><input type="radio" name="resolution"> <span class="price-text" data-idr="Custom (+50K)" data-usd="Custom (+$3.5)">Custom (+50K)</span></label>
+<label><input type="radio" name="resolution" value="1080x1920 Portrait"> 1080x1920 Portrait</label>
+<label><input type="radio" name="resolution" value="1920x1080 Landscape"> 1920x1080 Landscape</label>
+<label><input type="radio" name="resolution" value="Custom"> <span class="price-text" data-idr="Custom (+50K)" data-usd="Custom (+$3.5)">Custom (+50K)</span></label>
+<input type="text" id="resolution-custom-val" placeholder="Custom Resolution">
 
-<input type="text" placeholder="Custom Resolution">
 </div><div class="card">
 <h2>Duration</h2>
-<label><input type="radio" name="duration"> Up to 5 Seconds</label>
-<label><input type="radio" name="duration"> Up to 10 Seconds</label>
-<label><input type="radio" name="duration"> Up to 15 Seconds</label>
-<label><input type="radio" name="duration"> <span class="price-text" data-idr="Custom (+50K)" data-usd="Custom (+$3.5)">Custom (+50K)</span></label>
+<label><input type="radio" name="duration" value="Up to 5 Seconds"> Up to 5 Seconds</label>
+<label><input type="radio" name="duration" value="Up to 10 Seconds"> Up to 10 Seconds</label>
+<label><input type="radio" name="duration" value="Up to 15 Seconds"> Up to 15 Seconds</label>
+<label><input type="radio" name="duration" value="Custom"> <span class="price-text" data-idr="Custom (+50K)" data-usd="Custom (+$3.5)">Custom (+50K)</span></label>
+<input type="text" id="duration-custom-val" placeholder="Custom Duration">
 
-<input type="text" placeholder="Custom Duration">
 </div><div class="card">
 <h2>Features</h2>
-<label><input type="checkbox"> <span class="price-text" data-idr="Loop Animation (+20K)" data-usd="Loop Animation (+$1.5)">Loop Animation (+20K)</span></label>
-<label><input type="checkbox"> Upscale</label>
-<label><input type="checkbox"> Composite</label>
-<label><input type="checkbox"> <span class="price-text" data-idr="Background Animation (+100K~250K)" data-usd="Background Animation (+$7–$17)">Background Animation (+100K~250K)</span></label>
+<label><input type="checkbox" name="features" value="Loop Animation"> <span class="price-text" data-idr="Loop Animation (+20K)" data-usd="Loop Animation (+$1.5)">Loop Animation (+20K)</span></label>
+<label><input type="checkbox" name="features" value="Upscale"> Upscale</label>
+<label><input type="checkbox" name="features" value="Composite"> Composite</label>
+<label><input type="checkbox" name="features" value="Background Animation"> <span class="price-text" data-idr="Background Animation (+100K~250K)" data-usd="Background Animation (+$7–$17)">Background Animation (+100K~250K)</span></label>
 
 </div><div class="card">
 <h2>Commercial & Usage</h2>
-<label><input type="radio" name="usage"> Personal Use</label>
-<label><input type="radio" name="usage"> Commercial Use (×2)</label>
+<label><input type="radio" name="usage" value="Personal Use"> Personal Use</label>
+<label><input type="radio" name="usage" value="Commercial Use"> Commercial Use (×2)</label>
 
 </div><div class="card">
 <h2>Portfolio Permission</h2>
-<label><input type="radio" name="portfolio"> Yes</label>
-<label><input type="radio" name="portfolio"> <span class="price-text" data-idr="Hidden Commission (+100K)" data-usd="Hidden Commission (+$7)">Hidden Commission (+100K)</span></label>
+<label><input type="radio" name="portfolio" value="Yes"> Yes</label>
+<label><input type="radio" name="portfolio" value="Hidden Commission"> <span class="price-text" data-idr="Hidden Commission (+100K)" data-usd="Hidden Commission (+$7)">Hidden Commission (+100K)</span></label>
 
 </div><div class="card">
 <h2>Output Format</h2>
-<label><input type="checkbox"> MP4</label>
-<label><input type="checkbox"> MOV</label>
-<label><input type="checkbox"> GIF</label>
-<label><input type="checkbox"> WEBM</label>
+<label><input type="checkbox" name="format" value="MP4"> MP4</label>
+<label><input type="checkbox" name="format" value="MOV"> MOV</label>
+<label><input type="checkbox" name="format" value="GIF"> GIF</label>
+<label><input type="checkbox" name="format" value="WEBM"> WEBM</label>
 
 </div><div class="card">
 <h2>Schedule</h2>Start Date
-<input type="date">
-
+<input type="date" id="start-date">
 <br><br>
-
 Deadline
-<input type="date">
+<input type="date" id="deadline">
 
 </div><div class="card">
 <h2>Artwork Link (Google Drive / Mega / Dropbox)</h2>
-<input type="text" placeholder="Paste your Google Drive, Mega, or Dropbox link here...">
+<input type="text" id="artwork-link" placeholder="Paste your Google Drive, Mega, or Dropbox link here...">
+
 </div><div class="card">
-<h2>Additional Notes</h2><textarea placeholder="Write your request here..."></textarea></div><div class="card">
+<h2>Additional Notes</h2><textarea id="additional-notes" placeholder="Write your request here..."></textarea></div><div class="card">
 <h2>Terms of Service</h2><label>
-<input type="checkbox">
+<input type="checkbox" id="agree-tos">
 I agree to all Terms of Service.
 </label>
 </div><div class="card">
-<h2>Submit Commission</h2><button class="btn">Submit Form</button>
+<h2>Submit Commission</h2><button class="btn" id="submit-btn">Submit Form</button>
 
 </div><div class="footer"><img  class="chibi"><p>© 2026 Mikarileaf Animation Commission</p><p>Live2D • After Effects • Wallpaper Animation</p></div></div>
 <script>
+// Replace this with your actual Discord Webhook URL
+const WEBHOOK_URL = "YOUR_DISCORD_WEBHOOK_URL";
+
+// Handle Payment Method Currency Toggle
 document.querySelectorAll('input[name="payment"]').forEach(radio => {
   radio.addEventListener('change', (e) => {
     const isPaypal = e.target.value === 'paypal';
@@ -264,6 +267,162 @@ document.querySelectorAll('input[name="payment"]').forEach(radio => {
       el.textContent = isPaypal ? el.getAttribute('data-usd') : el.getAttribute('data-idr');
     });
   });
+});
+
+// Handle Form Submission to Discord Webhook
+const submitBtn = document.getElementById('submit-btn');
+submitBtn.addEventListener('click', async (e) => {
+  e.preventDefault();
+  
+  const agreeTos = document.getElementById('agree-tos').checked;
+  if (!agreeTos) {
+    alert("Please agree to the Terms of Service before submitting.");
+    return;
+  }
+  
+  // Gather fields
+  const type = document.querySelector('input[name="type"]:checked')?.value || "Not selected";
+  const payment = document.querySelector('input[name="payment"]:checked')?.value || "dana";
+  
+  // Complexity
+  const complexityEl = document.querySelector('input[name="complexity"]:checked');
+  let complexity = "Not selected";
+  if (complexityEl) {
+    const priceSpan = complexityEl.parentElement.querySelector('.price-text');
+    complexity = priceSpan ? (payment === 'paypal' ? priceSpan.getAttribute('data-usd') : priceSpan.getAttribute('data-idr')) : complexityEl.value;
+  }
+  
+  // Quality
+  const qualityEl = document.querySelector('input[name="quality"]:checked');
+  let quality = "Not selected";
+  if (qualityEl) {
+    const priceSpan = qualityEl.parentElement.querySelector('.price-text');
+    quality = priceSpan ? (payment === 'paypal' ? priceSpan.getAttribute('data-usd') : priceSpan.getAttribute('data-idr')) : qualityEl.value;
+  }
+  
+  // Resolution
+  const resolutionEl = document.querySelector('input[name="resolution"]:checked');
+  let resolution = "Not selected";
+  if (resolutionEl) {
+    if (resolutionEl.value === 'Custom') {
+      const customVal = document.getElementById('resolution-custom-val').value;
+      resolution = `Custom (${customVal || "Not specified"})`;
+    } else {
+      resolution = resolutionEl.value;
+    }
+  }
+  
+  // Duration
+  const durationEl = document.querySelector('input[name="duration"]:checked');
+  let duration = "Not selected";
+  if (durationEl) {
+    if (durationEl.value === 'Custom') {
+      const customVal = document.getElementById('duration-custom-val').value;
+      duration = `Custom (${customVal || "Not specified"})`;
+    } else {
+      duration = durationEl.value;
+    }
+  }
+  
+  // Features
+  const features = [];
+  document.querySelectorAll('input[name="features"]:checked').forEach(cb => {
+    const priceSpan = cb.parentElement.querySelector('.price-text');
+    if (priceSpan) {
+      features.push(payment === 'paypal' ? priceSpan.getAttribute('data-usd') : priceSpan.getAttribute('data-idr'));
+    } else {
+      features.push(cb.value);
+    }
+  });
+  const featuresText = features.length > 0 ? features.join(', ') : "None";
+  
+  // Commercial & Usage
+  const usage = document.querySelector('input[name="usage"]:checked')?.value || "Not selected";
+  
+  // Portfolio Permission
+  const portfolioEl = document.querySelector('input[name="portfolio"]:checked');
+  let portfolio = "Not selected";
+  if (portfolioEl) {
+    const priceSpan = portfolioEl.parentElement.querySelector('.price-text');
+    portfolio = priceSpan ? (payment === 'paypal' ? priceSpan.getAttribute('data-usd') : priceSpan.getAttribute('data-idr')) : portfolioEl.value;
+  }
+  
+  // Output Format
+  const formats = [];
+  document.querySelectorAll('input[name="format"]:checked').forEach(cb => {
+    formats.push(cb.value);
+  });
+  const formatsText = formats.length > 0 ? formats.join(', ') : "None";
+  
+  // Schedule
+  const startDate = document.getElementById('start-date').value || "Not specified";
+  const deadline = document.getElementById('deadline').value || "Not specified";
+  
+  // Artwork Link
+  const artworkLink = document.getElementById('artwork-link').value || "No link provided";
+  
+  // Additional Notes
+  const notes = document.getElementById('additional-notes').value || "None";
+  
+  // Payload for Discord
+  const payload = {
+    embeds: [
+      {
+        title: "🌸 New Mikarileaf Commission Request 🌸",
+        color: 16738228, // Pink color (#ff69b4)
+        fields: [
+          { name: "📋 Request Type", value: type, inline: true },
+          { name: "💳 Payment Method", value: payment.toUpperCase(), inline: true },
+          { name: "⚡ Animation Complexity", value: complexity, inline: true },
+          { name: "✨ Quality Option", value: quality, inline: true },
+          { name: "📐 Resolution", value: resolution, inline: true },
+          { name: "⏱️ Duration", value: duration, inline: true },
+          { name: "🛠️ Features", value: featuresText },
+          { name: "💼 Commercial & Usage", value: usage, inline: true },
+          { name: "🖼️ Portfolio Permission", value: portfolio, inline: true },
+          { name: "💾 Output Format", value: formatsText, inline: true },
+          { name: "📅 Schedule", value: `**Start:** ${startDate}\n**Deadline:** ${deadline}`, inline: true },
+          { name: "🔗 Artwork Link", value: artworkLink },
+          { name: "📝 Additional Notes", value: notes }
+        ],
+        timestamp: new Date().toISOString(),
+        footer: {
+          text: "Mikarileaf Commission System"
+        }
+      }
+    ]
+  };
+  
+  if (WEBHOOK_URL === "YOUR_DISCORD_WEBHOOK_URL") {
+    alert("Webhook URL is not configured yet. Please open the index.html file and replace 'YOUR_DISCORD_WEBHOOK_URL' with your actual Discord webhook link.");
+    console.log("Payload would be:", payload);
+    return;
+  }
+  
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Submitting...";
+  
+  try {
+    const response = await fetch(WEBHOOK_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
+    
+    if (response.ok) {
+      alert("Success! Your commission request has been submitted to Discord.");
+    } else {
+      alert("Error: Failed to submit to Discord. Response status: " + response.status);
+    }
+  } catch (error) {
+    console.error("Error submitting to Discord:", error);
+    alert("Connection error: Failed to submit. Check console for details.");
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Submit Form";
+  }
 });
 </script>
 </body>
