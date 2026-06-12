@@ -119,53 +119,117 @@ to{
 transform:translateY(-100px);
 }
 }
+
+.option-container {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.info-dropdown {
+  margin-left: 24px;
+  margin-top: 5px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  color: #555;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+.info-dropdown[open] {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.info-dropdown summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #ff69b4;
+  outline: none;
+  list-style: none;
+}
+.info-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+.info-dropdown summary::before {
+  content: "✨ ";
+}
+.info-dropdown p {
+  margin-top: 6px;
+  line-height: 1.4;
+  color: #555;
+}
 </style></head><body><div class="sparkle" style="left:10%">⭐</div>
 <div class="sparkle" style="left:40%;animation-delay:2s;">💖</div>
 <div class="sparkle" style="left:70%;animation-delay:4s;">✨</div><div class="container"><div class="hero"><img  class="chibi"><h1>🌸 Mikarileaf Animation Commission 🌸</h1><p>Bring Your Artwork to Life!</p><br><button class="btn">Commission Now</button>
 
 </div><div class="card">
-<h2>Request Type</h2><label><input type="radio" name="type"> Puppeting Animation</label>
-<label><input type="radio" name="type"> Attractive Live Animation</label>
+<h2>Request Type</h2>
+<div class="option-container">
+  <label><input type="radio" name="type" checked> Puppeting Animation</label>
+  <details class="info-dropdown">
+    <summary>What is this? 🤔</summary>
+    <p>Animating a 2D character (Live2D style) using layered parts. Ideal for VTuber models, character standees, and profile animations. Includes smooth breathing, head movements, blink/mouth sync, and physics hair sway.</p>
+  </details>
+</div>
+<div class="option-container">
+  <label><input type="radio" name="type"> Attractive Live Animation</label>
+  <details class="info-dropdown">
+    <summary>What is this? 🤔</summary>
+    <p>Rich, dynamic animation featuring high-quality visual effects (VFX), particle overlays, camera motions, and moving background elements. Great for wallpaper showcases, game trailers, and promotional scenes.</p>
+  </details>
+</div>
 
 </div><div class="card">
-<h2>Animation Complexity</h2><label><input type="radio" name="complexity"> Low (150K–200K)</label>
-<label><input type="radio" name="complexity"> Mid (200K–350K)</label>
-<label><input type="radio" name="complexity"> Hard (350K–650K)</label>
+<h2>Payment Method</h2>
+<label><input type="radio" name="payment" value="dana" checked> DANA</label>
+<label><input type="radio" name="payment" value="paypal"> PayPal</label>
 
 </div><div class="card">
-<h2>Quality Option</h2><label><input type="radio" name="quality"> 1K (Free)</label>
-<label><input type="radio" name="quality"> 2K (+20K)</label>
-<label><input type="radio" name="quality"> 4K (+50K)</label>
+<h2>Animation Complexity</h2>
+<label><input type="radio" name="complexity"> <span class="price-text" data-idr="Low (150K–200K)" data-usd="Low ($10–$13)">Low (150K–200K)</span></label>
+<label><input type="radio" name="complexity"> <span class="price-text" data-idr="Mid (200K–350K)" data-usd="Mid ($13–$23)">Mid (200K–350K)</span></label>
+<label><input type="radio" name="complexity"> <span class="price-text" data-idr="Hard (350K–650K)" data-usd="Hard ($23–$43)">Hard (350K–650K)</span></label>
 
 </div><div class="card">
-<h2>Resolution</h2><label><input type="radio" name="resolution"> 1080x1920 Portrait</label>
+<h2>Quality Option</h2>
+<label><input type="radio" name="quality"> <span class="price-text" data-idr="1K (Free)" data-usd="1K (Free)">1K (Free)</span></label>
+<label><input type="radio" name="quality"> <span class="price-text" data-idr="2K (+20K)" data-usd="2K (+$1.5)">2K (+20K)</span></label>
+<label><input type="radio" name="quality"> <span class="price-text" data-idr="4K (+50K)" data-usd="4K (+$3.5)">4K (+50K)</span></label>
+
+</div><div class="card">
+<h2>Resolution</h2>
+<label><input type="radio" name="resolution"> 1080x1920 Portrait</label>
 <label><input type="radio" name="resolution"> 1920x1080 Landscape</label>
-<label><input type="radio" name="resolution"> Custom (+50K)</label>
+<label><input type="radio" name="resolution"> <span class="price-text" data-idr="Custom (+50K)" data-usd="Custom (+$3.5)">Custom (+50K)</span></label>
 
 <input type="text" placeholder="Custom Resolution">
 </div><div class="card">
-<h2>Duration</h2><label><input type="radio" name="duration"> Up to 5 Seconds</label>
+<h2>Duration</h2>
+<label><input type="radio" name="duration"> Up to 5 Seconds</label>
 <label><input type="radio" name="duration"> Up to 10 Seconds</label>
 <label><input type="radio" name="duration"> Up to 15 Seconds</label>
-<label><input type="radio" name="duration"> Custom (+50K)</label>
+<label><input type="radio" name="duration"> <span class="price-text" data-idr="Custom (+50K)" data-usd="Custom (+$3.5)">Custom (+50K)</span></label>
 
 <input type="text" placeholder="Custom Duration">
 </div><div class="card">
-<h2>Features</h2><label><input type="checkbox"> Loop Animation (+20K)</label>
+<h2>Features</h2>
+<label><input type="checkbox"> <span class="price-text" data-idr="Loop Animation (+20K)" data-usd="Loop Animation (+$1.5)">Loop Animation (+20K)</span></label>
 <label><input type="checkbox"> Upscale</label>
 <label><input type="checkbox"> Composite</label>
-<label><input type="checkbox"> Background Animation (+100K~250K)</label>
+<label><input type="checkbox"> <span class="price-text" data-idr="Background Animation (+100K~250K)" data-usd="Background Animation (+$7–$17)">Background Animation (+100K~250K)</span></label>
 
 </div><div class="card">
-<h2>Commercial & Usage</h2><label><input type="radio" name="usage"> Personal Use</label>
+<h2>Commercial & Usage</h2>
+<label><input type="radio" name="usage"> Personal Use</label>
 <label><input type="radio" name="usage"> Commercial Use (×2)</label>
 
 </div><div class="card">
-<h2>Portfolio Permission</h2><label><input type="radio" name="portfolio"> Yes</label>
-<label><input type="radio" name="portfolio"> Hidden Commission (+100K)</label>
+<h2>Portfolio Permission</h2>
+<label><input type="radio" name="portfolio"> Yes</label>
+<label><input type="radio" name="portfolio"> <span class="price-text" data-idr="Hidden Commission (+100K)" data-usd="Hidden Commission (+$7)">Hidden Commission (+100K)</span></label>
 
 </div><div class="card">
-<h2>Output Format</h2><label><input type="checkbox"> MP4</label>
+<h2>Output Format</h2>
+<label><input type="checkbox"> MP4</label>
 <label><input type="checkbox"> MOV</label>
 <label><input type="checkbox"> GIF</label>
 <label><input type="checkbox"> WEBM</label>
@@ -180,10 +244,6 @@ Deadline
 <input type="date">
 
 </div><div class="card">
-<h2>Payment Method</h2><label><input type="radio" name="payment"> DANA</label>
-<label><input type="radio" name="payment"> PayPal</label>
-
-</div><div class="card">
 <h2>Additional Notes</h2><textarea placeholder="Write your request here..."></textarea></div><div class="card">
 <h2>Terms of Service</h2><label>
 <input type="checkbox">
@@ -192,6 +252,17 @@ I agree to all Terms of Service.
 </div><div class="card">
 <h2>Submit Commission</h2><button class="btn">Submit Form</button>
 
-</div><div class="footer"><img  class="chibi"><p>© 2026 Mikarileaf Animation Commission</p><p>Live2D • After Effects • Wallpaper Animation</p></div></div></body>
+</div><div class="footer"><img  class="chibi"><p>© 2026 Mikarileaf Animation Commission</p><p>Live2D • After Effects • Wallpaper Animation</p></div></div>
+<script>
+document.querySelectorAll('input[name="payment"]').forEach(radio => {
+  radio.addEventListener('change', (e) => {
+    const isPaypal = e.target.value === 'paypal';
+    document.querySelectorAll('.price-text').forEach(el => {
+      el.textContent = isPaypal ? el.getAttribute('data-usd') : el.getAttribute('data-idr');
+    });
+  });
+});
+</script>
+</body>
 
 </html>
